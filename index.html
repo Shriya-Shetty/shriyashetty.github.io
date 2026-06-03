@@ -1,10 +1,563 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Shriya Shetty</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shriya Salil Shetty | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h1>Shriya Shetty</h1>
-    <p>Computer Engineering Student</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Shriya Shetty</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Shriya Salil Shetty</span></h1>
+                <p class="hero-subtitle">AI/ML Engineer | Computer Vision Specialist | Full-Stack Developer</p>
+                <p class="hero-description">
+                    Third-year B.Tech student specializing in Cybersecurity & Forensics. 
+                    Passionate about building impactful solutions using AI, ML, and modern web technologies.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/shriya-shetty-5034bb30a" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Shriya-Shetty" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:shriyashetty9@gmail.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-image-placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Third-year B.Tech Computer Science student at KJ Somaiya College of Engineering, 
+                        specializing in Cybersecurity & Forensics. My passion lies in creating intelligent solutions 
+                        that bridge the gap between advanced AI/ML technologies and real-world applications.
+                    </p>
+                    <p>
+                        With hands-on experience in Computer Vision, Machine Learning, and Full-Stack Development, 
+                        I've worked on diverse projects ranging from aviation incident investigation to travel planning 
+                        and healthcare support platforms. I'm particularly interested in offline RAG systems, 
+                        object detection, and building secure, scalable applications.
+                    </p>
+                    <p>
+                        Beyond coding, I'm an active member of the tech community, having presented research at 
+                        multiple conferences and participated in hackathons. When I'm not coding, you'll find me 
+                        bouldering or playing football!
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>8.2</h3>
+                        <p>Current CGPA</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>5+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>3</h3>
+                        <p>Publications</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>2025-27</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">PHP</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Web & Mobile</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MERN Stack</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI/ML & Computer Vision</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">YOLOv8</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">RAG Systems</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">Supabase</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Selenium</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Cybersecurity</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Burp Suite</span>
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">FTK</span>
+                        <span class="skill-tag">Autopsy</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Other Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Web Scraping</span>
+                        <span class="skill-tag">Data Processing</span>
+                        <span class="skill-tag">API Development</span>
+                        <span class="skill-tag">Technical Writing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>AI/ML Intern</h3>
+                        <p class="company">VNV Consultants</p>
+                        <p class="date">December 2025 – Present</p>
+                        <ul class="experience-details">
+                            <li>Applied Computer Vision to isometric pipeline drawings</li>
+                            <li>Created segmentation annotations for model training</li>
+                            <li>Trained YOLO-based feature extraction models</li>
+                            <li>Improved image preprocessing and visualization workflows</li>
+                            <li>Enhanced interpretability of AI outputs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Research Assistant Intern</h3>
+                        <p class="company">TMRT Lab</p>
+                        <p class="date">July 2024 – September 2025</p>
+                        <ul class="experience-details">
+                            <li>Developed YOLOv8 models for marine detection</li>
+                            <li>Automated large-scale dataset collection using Selenium, BeautifulSoup, and SerpAPI</li>
+                            <li>Worked on skin classification and plastic detection projects</li>
+                            <li>Presented research at Abhiyantriki 2024 & 2025</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Flight Investigator</h3>
+                        <p class="project-description">
+                            AI-powered aviation incident investigation platform with FDR/CVR analysis and offline RAG capabilities.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">FastAPI</span>
+                            <span class="tech-badge">RAG</span>
+                            <span class="tech-badge">LLMs</span>
+                        </div>
+                        <p class="achievements">
+                            <i class="fas fa-star"></i> HAL Aerothon Finalist
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Shriya-Shetty" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>PocketTrip</h3>
+                        <p class="project-description">
+                            Agentic AI Travel Assistant with expense tracking, budget management, and group settlements.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">AI Agents</span>
+                            <span class="tech-badge">Fintech</span>
+                            <span class="tech-badge">Full Stack</span>
+                        </div>
+                        <p class="achievements">
+                            <i class="fas fa-trophy"></i> MumbaiHacks Winner
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Shriya-Shetty" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>SwasthyaSetu</h3>
+                        <p class="project-description">
+                            Healthcare support platform designed for migrant workers with language support and community assistance.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Web Dev</span>
+                            <span class="tech-badge">Healthcare</span>
+                            <span class="tech-badge">Community</span>
+                        </div>
+                        <p class="achievements">
+                            <i class="fas fa-check-circle"></i> Smart India Hackathon Selection
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Shriya-Shetty" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Marine Life Information Website</h3>
+                        <p class="project-description">
+                            Comprehensive marine species database with responsive design and advanced search capabilities.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">HTML/CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Shriya-Shetty" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>ThemeX – iOS Home Screen Designer</h3>
+                        <p class="project-description">
+                            Interactive theme designer with real-time preview, drag-and-drop widgets, and icon customization.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">MERN Stack</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Drag-Drop</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Shriya-Shetty" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Climbing Route Safety Analysis</h3>
+                        <p class="project-description">
+                            Vision-based structural injury risk prediction system for indoor climbing routes.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Computer Vision</span>
+                            <span class="tech-badge">ML</span>
+                            <span class="tech-badge">Safety</span>
+                        </div>
+                        <p class="achievements">
+                            <i class="fas fa-file-alt"></i> Published - Taylor & Francis
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Shriya-Shetty" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Research Publications</h2>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <div class="publication-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="publication-content">
+                        <h3>An Interactive Data Cleaning and Incremental Learning Framework for Healthcare CSV-Based Clinical Anomaly Detection</h3>
+                        <p class="publication-meta">
+                            <span class="publisher">Taylor & Francis Publications</span>
+                            <span class="date">April 2026</span>
+                        </p>
+                        <p class="publication-description">
+                            A comprehensive framework for cleaning healthcare data and detecting clinical anomalies using incremental learning approaches.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="publication-content">
+                        <h3>An Evolutionary Architectural Analysis of YOLOv1–YOLOv12 for Dense Wheat Head Detection in Precision Agriculture</h3>
+                        <p class="publication-meta">
+                            <span class="publisher">Taylor & Francis Publications</span>
+                            <span class="date">April 2026</span>
+                        </p>
+                        <p class="publication-description">
+                            Comprehensive analysis of YOLO architecture evolution for agricultural applications and wheat head detection.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="publication-content">
+                        <h3>Vision-Based Structural Injury Risk Prediction in Indoor Climbing Routes</h3>
+                        <p class="publication-meta">
+                            <span class="publisher">Taylor & Francis Publications</span>
+                            <span class="date">April 2026</span>
+                        </p>
+                        <p class="publication-description">
+                            Application of computer vision and machine learning for predicting structural risks in climbing routes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <div class="education-header">
+                    <h3>B.Tech Computer Science & Engineering</h3>
+                    <p class="specialization">Honours in Cybersecurity & Forensics</p>
+                </div>
+                <div class="education-details">
+                    <p><strong>Institution:</strong> KJ Somaiya College of Engineering</p>
+                    <p><strong>Duration:</strong> 2023 – 2027</p>
+                    <p><strong>Current CGPA:</strong> <span class="highlight">8.2</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements & Recognition</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Smart India Hackathon</h3>
+                    <p>Cleared internal rounds with SwasthyaSetu – Healthcare support platform for migrant workers</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>MumbaiHacks</h3>
+                    <p>Developed PocketTrip – AI-powered travel assistant with expense tracking and group settlements</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>HAL Aerothon</h3>
+                    <p>Finalist with Flight Investigator – AI-powered aviation incident investigation platform</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out through any of these channels.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p class="contact-label">Email</p>
+                                <a href="mailto:shriyashetty9@gmail.com">shriyashetty9@gmail.com</a>
+                                <a href="mailto:shriya09@somaiya.edu">shriya09@somaiya.edu</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <p class="contact-label">Phone</p>
+                                <p>+91 7506886032</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p class="contact-label">Location</p>
+                                <p>Mumbai, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/shriya-shetty-5034bb30a" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Shriya-Shetty" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:shriyashetty9@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Shriya Salil Shetty. All rights reserved.</p>
+            <p>Designed & Built with <i class="fas fa-heart"></i> by Shriya Shetty</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
