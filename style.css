@@ -1,3 +1,9 @@
+
+
+
+
+
+
 /* ========== CSS Variables & Reset ========== */
 :root {
     --primary-color: #6366f1;
@@ -124,6 +130,7 @@ body {
     min-height: calc(100vh - 60px);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .hero-content {
@@ -131,6 +138,17 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-text {
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero-title {
@@ -225,6 +243,29 @@ body {
     transform: translateY(-5px) rotate(10deg);
 }
 
+.profile-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    border: 5px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.profile-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+    border-color: var(--secondary-color);
+}
+
 .profile-image-placeholder {
     width: 100%;
     aspect-ratio: 1;
@@ -236,6 +277,7 @@ body {
     font-size: 150px;
     color: rgba(255, 255, 255, 0.3);
     box-shadow: var(--shadow-lg);
+    border: 5px solid rgba(255, 255, 255, 0.2);
 }
 
 /* ========== Section Styles ========== */
@@ -259,10 +301,74 @@ body {
 
 section {
     padding: 80px 0;
+    position: relative;
+    overflow: hidden;
 }
 
 section:nth-child(even) {
     background-color: var(--bg-light);
+}
+
+/* Background images for sections */
+.hero::before {
+    content: '';
+    position: absolute;
+    right: -100px;
+    top: -50px;
+    width: 400px;
+    height: 400px;
+    background-image: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    left: -80px;
+    bottom: -100px;
+    width: 350px;
+    height: 350px;
+    background-image: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-content {
+    position: relative;
+    z-index: 1;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.projects .container {
+    position: relative;
+    z-index: 1;
 }
 
 /* ========== About Section ========== */
@@ -293,11 +399,13 @@ section:nth-child(even) {
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border: 2px solid var(--border-color);
 }
 
 .stat-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
 }
 
 .stat-card h3 {
@@ -312,6 +420,31 @@ section:nth-child(even) {
 }
 
 /* ========== Skills Section ========== */
+.skills {
+    position: relative;
+}
+
+.skills::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -100px;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    background-image: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.skills .container {
+    position: relative;
+    z-index: 1;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -324,11 +457,13 @@ section:nth-child(even) {
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border: 2px solid var(--border-color);
 }
 
 .skill-category:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
 }
 
 .skill-category h3 {
@@ -363,6 +498,32 @@ section:nth-child(even) {
 }
 
 /* ========== Experience Section ========== */
+.experience {
+    position: relative;
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 350px;
+    height: 350px;
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.experience .container {
+    position: relative;
+    z-index: 1;
+}
+
 .experience-timeline {
     position: relative;
     padding: 2rem 0;
@@ -418,6 +579,7 @@ section:nth-child(even) {
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border-left: 4px solid var(--primary-color);
 }
 
 .timeline-content:hover {
@@ -477,24 +639,44 @@ section:nth-child(even) {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    border: 2px solid var(--border-color);
 }
 
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
 }
 
 .project-header {
-    height: 150px;
+    height: 200px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
 }
 
 .project-icon {
-    font-size: 60px;
+    font-size: 80px;
     color: white;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-body {
@@ -559,6 +741,30 @@ section:nth-child(even) {
 }
 
 /* ========== Publications Section ========== */
+.publications {
+    position: relative;
+}
+
+.publications::before {
+    content: '';
+    position: absolute;
+    right: -80px;
+    top: -50px;
+    width: 300px;
+    height: 300px;
+    background-image: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.publications .container {
+    position: relative;
+    z-index: 1;
+}
+
 .publications-list {
     display: flex;
     flex-direction: column;
@@ -574,11 +780,13 @@ section:nth-child(even) {
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border: 2px solid var(--border-color);
 }
 
 .publication-item:hover {
     box-shadow: var(--shadow-lg);
     transform: translateX(5px);
+    border-color: var(--primary-color);
 }
 
 .publication-icon {
@@ -618,16 +826,122 @@ section:nth-child(even) {
 }
 
 /* ========== Education Section ========== */
-.education-card {
-    background: white;
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    max-width: 800px;
-    margin: 0 auto;
-    border-left: 5px solid var(--primary-color);
+.education {
+    position: relative;
 }
 
+.education::before {
+    content: '';
+    position: absolute;
+    left: -80px;
+    bottom: -100px;
+    width: 300px;
+    height: 300px;
+    background-image: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.education .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional new structure support (works with your current markup too) */
+.education-timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+
+.edu-card,
+.education-card {
+    background: white;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    border: 2px solid var(--border-color);
+    overflow: hidden;
+    transition: var(--transition);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.edu-card:hover,
+.education-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.edu-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.75rem;
+    position: relative;
+}
+
+.edu-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+}
+
+.edu-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(236, 72, 153, 0.12));
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.edu-body {
+    position: relative;
+    z-index: 1;
+}
+
+.edu-body h3 {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.edu-sub {
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+}
+
+.edu-inst {
+    color: var(--text-light);
+    margin-bottom: 0.6rem;
+}
+
+.edu-meta {
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Current index.html also uses these classes */
 .education-header h3 {
     color: var(--primary-color);
     font-size: 1.5rem;
@@ -646,7 +960,48 @@ section:nth-child(even) {
     font-size: 1.05rem;
 }
 
+/* Better spacing on education section cards */
+.education-timeline .edu-card + .edu-card {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .edu-card {
+        grid-template-columns: auto 1fr;
+        padding: 1.4rem;
+    }
+
+    .edu-body h3 {
+        font-size: 1.05rem;
+    }
+}
+
+
 /* ========== Achievements Section ========== */
+.achievements {
+    position: relative;
+}
+
+.achievements::after {
+    content: '';
+    position: absolute;
+    left: -60px;
+    bottom: -80px;
+    width: 300px;
+    height: 300px;
+    background-image: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.achievements .container {
+    position: relative;
+    z-index: 1;
+}
+
 .achievements-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -660,11 +1015,13 @@ section:nth-child(even) {
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border: 2px solid var(--border-color);
 }
 
 .achievement-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-color);
 }
 
 .achievement-icon {
@@ -686,6 +1043,32 @@ section:nth-child(even) {
 }
 
 /* ========== Contact Section ========== */
+.contact {
+    position: relative;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 350px;
+    height: 350px;
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contact .container {
+    position: relative;
+    z-index: 1;
+}
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -775,18 +1158,25 @@ section:nth-child(even) {
 .contact-form input,
 .contact-form textarea {
     padding: 1rem;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
     transition: var(--transition);
+    background: white;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-color: var(--primary-color);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+    background: rgba(99, 102, 241, 0.02);
 }
 
 .contact-form button {
@@ -794,6 +1184,8 @@ section:nth-child(even) {
     font-size: 1rem;
     border-radius: 8px;
     margin-top: 0.5rem;
+    border: none;
+    cursor: pointer;
 }
 
 /* ========== Footer ========== */

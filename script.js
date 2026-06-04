@@ -132,26 +132,27 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // Get form data
-        const formData = new FormData(contactForm);
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const subject = contactForm.querySelectorAll('input[type="text"]')[1].value;
-        const message = contactForm.querySelector('textarea').value;
+        // Get form data using name attributes
+        const name = contactForm.querySelector('input[name="name"]').value;
+        const email = contactForm.querySelector('input[name="email"]').value;
+        const subject = contactForm.querySelector('input[name="subject"]').value;
+        const message = contactForm.querySelector('textarea[name="message"]').value;
 
-        // Create mailto link
-        const mailtoLink = `mailto:shriyashetty9@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+        // Create mailto link with proper encoding
+        const mailtoLink = `mailto:shriyashetty9@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`)}`;
 
         // Open email client
         window.location.href = mailtoLink;
 
-        // Optional: Show success message
+        // Show success message
         const submitBtn = contactForm.querySelector('.btn-primary');
         const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Message sent! Opening email client...';
+        submitBtn.textContent = '✓ Opening email client...';
+        submitBtn.style.background = '#10b981';
 
         setTimeout(() => {
             submitBtn.textContent = originalText;
+            submitBtn.style.background = '';
             contactForm.reset();
         }, 3000);
     });
@@ -241,7 +242,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// ========== Lazy Loading Images (if images are added) =========
+// ========== Lazy Loading Images (if images are added) ========== 
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -345,3 +346,4 @@ focusStyle.textContent = `
 document.head.appendChild(focusStyle);
 
 console.log('Portfolio loaded successfully!');
+
